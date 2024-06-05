@@ -1,3 +1,4 @@
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 import React, { useState } from "react";
 import {
   Button,
@@ -58,40 +59,8 @@ export default function Header({ ...props }) {
           m={0}
           p={0}
           flexDirection={{ base: "column", sm: "row" }}
-        >
-          <ListItem>
-            <Link href="#">
-              <Text color="white.A700_99" letterSpacing="-0.16px">
-                About
-              </Text>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="#">
-              <Text color="white.A700_99" letterSpacing="-0.16px">
-                Features
-              </Text>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="#">
-              <Text color="white.A700_99" letterSpacing="-0.16px">
-                Help
-              </Text>
-            </Link>
-          </ListItem>
-        </UnorderedList>
-        <Button
-          size="xs"
-          colorscheme="blue_gray_400"
-          letterSpacing="-0.32px"
-          fontFamily="Inter"
-          fontweight={500}
-          minw={{ base: "unset", sm: "143px" }}
-          borderRadius="10px"
-        >
-          Connect Wallet
-        </Button>
+        ></UnorderedList>
+        <ConnectButton className="w-full " />
       </Flex>
       {/* Hamburger Menu Icon */}
       <Box
