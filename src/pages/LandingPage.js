@@ -1,19 +1,17 @@
 import React from "react";
-import {
-  Image,
-  Button,
-  Input,
-  Flex,
-  Text,
-  Heading,
-  IconButton,
-  SimpleGrid,
-  Container,
-  Box,
-} from "@chakra-ui/react";
+import { useNetwork } from "wagmi";
+import { Image, Button, Flex, Text, Heading, Box } from "@chakra-ui/react";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+
 function LandingPage() {
+  const { chain } = useNetwork();
+
   return (
     <div style={{ width: "100%" }}>
+      <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
       {/* hero section */}
       <Box alignSelf="stretch">
         <Box position="relative">
@@ -64,28 +62,20 @@ function LandingPage() {
                         as="h1"
                         letterSpacing="-9.60px"
                         fontSize="128.04px"
-                        style={{ color: "white" }}
+                        // style={{ color: "white" }}
+                        style={{ color: "white", fontFamily: 'DM Sans, sans-serif' }}
+                        // fontFamily={}
                       >
                         Peer2Play
                       </Heading>
                       <Text
                         size="x1"
                         letterSpacing="-0.79px"
-                        style={{ color: "white" }}
+                        // fontFamily="Inter"
+                        style={{ color: "white", fontFamily: 'Inter, sans-serif' }}
                       >
                         Connect, Invite, Challenge & Earn
                       </Text>
-                      <Button
-                        size="md"
-                        mt="31px"
-                        letterSpacing="-0.32px"
-                        fontFamily="Inter"
-                        fontweight={500}
-                        minw="153px"
-                        borderRadius="10px"
-                      >
-                        Connect Wallet
-                      </Button>
                     </Flex>
                   </Flex>
                   <Image
