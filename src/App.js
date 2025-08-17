@@ -9,7 +9,11 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Router>
-        <DesktopPage />
+        {/* <DesktopPage />
+         */}
+        <h1>
+          hello world
+        </h1>
       </Router>
     </ChakraProvider>
   );
